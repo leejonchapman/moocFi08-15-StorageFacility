@@ -24,22 +24,24 @@ public class StorageFacility {
         }
         return storageUnits.get(storageUnit);
     }
+
     public void remove(String storageUnit, String item) {
         if (this.storageUnits.get(storageUnit).contains(item)) {
             this.storageUnits.get(storageUnit).remove(item);
         }
-        if (this.storageUnits.get(storageUnit).isEmpty()){
+        if (this.storageUnits.get(storageUnit).isEmpty()) {
             this.storageUnits.remove(storageUnit);
         }
     }
-    public ArrayList<String> storageUnits(){
+
+    public ArrayList<String> storageUnits() {
         ArrayList<String> temp = new ArrayList<>();
-        for (String storageUnit:storageUnits.keySet()
-             ) {
-            if (storageUnit.isEmpty()){
+        for (String storageUnit : storageUnits.keySet()
+        ) {
+            if (storageUnit.isEmpty()) {
 
             } else {
-               temp.add(storageUnit);
+                temp.add(storageUnit);
             }
         }
         return temp;
